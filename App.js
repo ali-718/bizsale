@@ -16,6 +16,7 @@ import {
 import Home from "./src/screens/Home";
 import { Icon } from "native-base";
 import About from "./src/screens/About";
+import Login from "./src/screens/Login";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -93,6 +94,6 @@ function DrawerNavigator() {
 
 export default class App extends Component {
   render() {
-    return <DrawerNavigator />;
+    return <Login />;
   }
 }
