@@ -33,7 +33,7 @@ function StackNavigator(props) {
     >
       <Stack.Screen
         options={{
-          headerTitle: "home",
+          headerTitle: "Mukhlis Team",
           headerLeft: () => (
             <View style={{ paddingLeft: 20 }}>
               <Icon
@@ -42,7 +42,29 @@ function StackNavigator(props) {
                 onPress={() => props.navigation.toggleDrawer()}
               />
             </View>
-          )
+          ),
+          headerRight: () => (
+            <View style={{ paddingRight: 20, flexDirection: "row" }}>
+              <Icon
+                name="logo-whatsapp"
+                onPress={() => props.navigation.toggleDrawer()}
+                style={{
+                  marginRight: 20,
+                  color: "#60C659"
+                }}
+              />
+              <Icon
+                name="logo-youtube"
+                onPress={() => props.navigation.toggleDrawer()}
+                style={{ color: "#FF2500" }}
+              />
+            </View>
+          ),
+          headerStyle: {
+            backgroundColor: "#AADCF7",
+            shadowColor: "rgba(0,0,0,0)",
+            elevation: 0
+          }
         }}
         initialParams={{ drawer: drawwer }}
         name="Home"
